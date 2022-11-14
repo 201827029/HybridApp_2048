@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>2048</title>
+
+    <style>
+
+        *
+        {
+            text-align: center;
+        }
+        #app
+        {
+            background-color:#003366;
+            width: 300px; height: 300px;
+            border:  2px solid #000000;
+            border-radius: 25px;
+            display: grid;
+	        grid-template-columns: 1fr 1fr 1fr 1fr;
+	        grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px; padding: 10px;
+        }
+
+        .num
+        {
+            border: 2px solid #000000;
+            border-radius: 25px;
+            background-color: #CCFFCC;
+        }
+
+    </style>
+
+</head>
+    
+<body>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+        <div class="num" v-for="num in list">{{num}}</div>
+    </div>
+
+    <script>
+        //하나로 합치는 것을 mount라고 한다.
+        const{createApp} = Vue;
+        createApp
+        ({
+            data()
+            {
+                    return {
+                        list:16
+                    }
+            },
+            mounted() //mount 했다는 것을 알려줌
+            {
+
+            }
+        }).mount("#app");
+    </script>
+
+
+</body>
+
+</html>

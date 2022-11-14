@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+    
+<body>
+    
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+        <button @click="loveCount++">고백하기</button>
+        <p>{{boy}}가 {{girl}}에게 <b v-html="style">고백</b>했다가
+         {{ loveCount }} 번 차였다.</p>
+    </div>
+
+    <script>
+        //하나로 합치는 것을 mount라고 한다.
+        const{createApp} = Vue;
+
+        createApp
+        ({
+            data()
+            {
+                return {
+                    boy: "누군",
+                    girl: "누구",
+                    loveCount: 0,
+                    style:"<span style=color:red;>고백</span>"
+                }
+            },
+            mounted() //mount 했다는 것을 알려줌
+            {
+                loveCount = 1;
+            }
+        }).mount("#app");
+    </script>
+
+</body>
+</html>

@@ -151,11 +151,16 @@ function Down() {
     CreateNum();
 }
 
+var startgame = 0;
 function keylog(e) {
     console.log(e.key);
     switch (e.key) {
         case 'Enter':
-            CreateNum();
+            if (startgame == 0) {
+                CreateNum();
+                CreateNum();
+                startgame = 1;
+            }
             break;
         case 'ArrowRight':
             Right();

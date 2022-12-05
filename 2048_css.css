@@ -31,3 +31,37 @@
     font-family: sans-serif;
     border-radius: 20;
 }
+
+#num2 {
+    background-color: rgb(162, 247, 181);
+}
+#num4 {
+    background-color: rgb(136, 206, 151);
+}
+#num8 {
+    background-color: rgb(86, 133, 96);
+}
+#num16 {
+    background-color: rgb(184, 142, 192);
+}
+#num32 {
+    background-color: rgb(204, 142, 191);
+}
+#num64 {
+    background-color: rgb(228, 110, 110);
+}
+#num128 {
+    background-color: rgb(130, 148, 130);
+}
+#num256 {
+    background-color: rgb(120, 203, 252);
+}
+#num512 {
+    background-color: rgb(89, 149, 184);
+}
+#num1024 {
+    background-color: rgb(49, 85, 105);
+}
+#num2048 {
+    background-color: rgb(195, 219, 89);
+}

@@ -1,121 +1,30 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>2048</title>
-
-    <style>
-        * {
-            text-align: center;
-        }
-
-        #app {
-            background-color: #003366;
-            width: 300px;
-            height: 300px;
-            border: 2px solid #000000;
-            border-radius: 25px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            grid-gap: 10px;
-            padding: 10px;
-            position: relative;
-            line-height: 50px;
-        }
-
-        .num {
-            border: 2px solid #000000;
-            border-radius: 25px;
-            background-color: #CCFFCC;
-
-        }
-
-
-        .num2 {
-            border: 2px solid #000000;
-            border-radius: 22px;
-            left: 14px;
-            top: 14px;
-            width: 55px;
-            height: 55px;
-            background-color: brown;
-            position: absolute;
-        }
-    </style>
-
+    <title>2048 실습</title>
+    <link rel="stylesheet" href="2048_css.css" type="text/css">
 </head>
-
 <body>
     <script src="https://unpkg.com/vue@3"></script>
-
+    
     <div id="app">
-        <div class="num" v-for="num in list">{{num}}</div>
-        <div class="num2">2</div>
+        <div class="backblock" id="exist" v-for="index in backblocks"></div>                    
     </div>
-
-
-    <script>
-        //하나로 합치는 것을 mount라고 한다.
-        const { createApp } = Vue;
-
-        var move = document.getElementsByClassName("num2");
-        createApp
-            ({
-                data() {
-                    return {
-                        list: 16,
-                    }
-                },
-                mounted() //mount 했다는 것을 알려줌
-                {
-
+    
+    <script type="text/javascript" src="test2_js.js"></script>
+        
+    <script type="text/javascript">
+        const {createApp} = Vue;
+        createApp({
+            data() {
+                return {
+                    backblocks : 16,
                 }
-            }).mount("#app");
-
-        //document.addEventListener('keydown', (event) => {
-        // console.log(event);
-        // });
-
-        // 먼저 눌린 키를 수신할 이벤트 리스너 필요
-        document.addEventListener("keydown", keyDownHandler, false);
-
-        var block = document.getElementsByClassName("num2");
-        var i = 0;
-
-
-        // div 블럭 이동
-        function keyDownHandler(e) {
-            if (e.key == 37 || e.key == "ArrowRight") {
-                console.log(e);
-                for (i = 0; i < block.length; i++) {
-                    block[i].style.marginLeft = 233 + "px";
-                }
-            }
-            else if (e.key == 39 || e.key == "ArrowLeft") {
-                console.log(e);
-                for (i = 0; i < block.length; i++) {
-                    block[i].style.marginLeft = 0 + "px";
-                }
-            }
-            else if (e.key == 38 || e.key == "ArrowUp") {
-                console.log(e);
-                for (i = 0; i < block.length; i++) {
-                    block[i].style.marginTop = 0 + "px";
-                }
-            }
-            else if (e.key == 40 || e.key == "ArrowDown") {
-                console.log(e);
-                for (i = 0; i < block.length; i++) {
-                    block[i].style.marginTop = 233 + "px";
-                }
-            }
-        }
-
+            },
+            mounted(){
+                console.log("app 마운트");
+            },
+        }).mount("#app");
 
     </script>
-
-
 </body>
-
 </html>

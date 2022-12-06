@@ -82,7 +82,7 @@ function CreateNum() {  //랜덤한 칸에 2 또는 4를
 
     // 점수가 2048일 경우
     for (let index = 0; index < 16; index++) { // div 15개를 전부 확인 후에
-        if (blocks[index].innerHTML == 8) { // 텍스트가 2048이 존재하는 경우
+        if (blocks[index].innerHTML == 2048) { // 텍스트가 2048이 존재하는 경우
             endtitlediv.style.display = 'block'; // 게임 종료 DIV를 보이게 한다
         }
     }

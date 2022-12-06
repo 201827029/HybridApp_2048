@@ -1,32 +1,49 @@
 <html lang="en">
+
 <head>
     <title>2048 실습</title>
     <link rel="stylesheet" href="2048_css.css" type="text/css">
 </head>
+
 <body>
     <script src="https://unpkg.com/vue@3"></script>
-    
+
     <div id="app">
-        <div class="backblock" v-for="index in backblocks"></div>                    
+        <div class="backblock" v-for="index in backblocks"></div>
     </div>
-    <div>엔터 클릭 시 시작</div>
-    <div id = "score">0</div>
+
+    <div id="title">엔터 클릭 시 시작
+    </div>
+
+    <div id="endtitle">2048 완성 계속 하려면 C 클릭
+    </div>
+
+    <div id="scoreboard">
+        SCORE : <div id="score">0</div>
+    </div>
+    <div id="game2048">2048GAME</div>
+
+    <div id="gameovertitle">게임 오버 다시 하려면 새로고침</div>
+
     
+
+
     <script type="text/javascript" src="2048_js.js"></script>
-        
+
     <script type="text/javascript">
-        const {createApp} = Vue;
+        const { createApp } = Vue;
         createApp({
             data() {
                 return {
-                    backblocks : 16,
+                    backblocks: 16,
                 }
             },
-            mounted(){
+            mounted() {
                 console.log("app 마운트");
             },
         }).mount("#app");
 
     </script>
 </body>
+
 </html>

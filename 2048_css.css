@@ -1,3 +1,7 @@
+*{
+    background-color: rgb(78, 43, 43);
+}
+
 #app{
     position: relative;
     width: 590px;
@@ -8,7 +12,7 @@
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
     padding : 10px;     
-    border-radius: 20;      
+    border-radius: 20;
 }
 .backblock{            
     background-color: rgb(118, 130, 238);
@@ -30,6 +34,74 @@
     font-size: 70;
     font-family: sans-serif;
     border-radius: 20;
+}
+
+#scoreboard {
+    position: absolute;
+    top: 650;
+    left: 450;
+    border: 3px solid black;
+    margin: 0;
+    padding: 0;
+    width: 170;
+    float: left;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 30;
+}
+#game2048 {
+    position: absolute;
+    top: 650;
+    left: 70;
+    border: 3px solid black;
+    margin: 0;
+    padding: 0;
+    width: 300;
+    float: left;
+    text-align: center;
+    font-size: 50;
+    border-radius: 20px;
+}
+
+#gameovertitle{
+    display: none;
+    position: absolute;
+    width: 610;
+    height: 610;
+    top: 7;
+    left: 7;
+    border: 1px solid black;
+    font-size: 35;
+    text-align: center;
+    line-height: 15;
+    background-color: rgb(3, 204, 93);
+}
+
+#title {
+    position: absolute;
+    width: 610;
+    height: 610;
+    top: 7;
+    left: 7;
+    border: 1px solid black;
+    font-size: 35;
+    text-align: center;
+    line-height: 15;
+    background-color: rgb(3, 204, 93);
+}
+
+#endtitle {
+    position: absolute;
+    width: 610;
+    height: 610;
+    top: 7;
+    left: 7;
+    border: 1px solid black;
+    font-size: 35;
+    text-align: center;
+    line-height: 15;
+    background-color: rgb(3, 204, 93);
+    display: none;
 }
 
 #num2 {
